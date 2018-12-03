@@ -1,3 +1,83 @@
 /* =============================
 	   FOOTER STYLES
 =============================== */
+
+.x-colophon.top {
+	border: 0 !important;
+	background: url('/wp-content/uploads/2018/12/quote-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	text-align: center;
+	padding: 5% 10px !important;
+	box-shadow: none !important;
+	
+	&::before {
+		content: '';
+	    position: absolute;
+	    display: block !important;
+	    width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    z-index: 1;
+	    background-color: rgba(0,0,0, .8);
+	}
+	
+	.widget {
+		text-shadow: none;
+		
+		.h-widget {
+			font-size: 2.2rem !important;
+			color: white;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+
+.x-colophon.bottom {
+	border: 0 !important;
+	background-color: $d-grey;
+	color: white;
+	font-size: 0.8rem;
+	box-shadow: none !important;
+	
+		
+	.copyrights {
+		text-align: left;
+		letter-spacing: 0;
+		
+		.x-colophon-content {
+			text-align: left;
+			letter-spacing: 0;
+			margin: 0;
+			
+		}
+
+	}
+	
+	.connect-social {
+		display: flex;
+		text-align: right;
+		
+		.connect {
+			float: right;
+		}
+		
+		p,
+		.x-social-global,
+		span {
+			margin: 0;
+			display: inline;
+		}
+		
+		span {
+			padding: 0 3%;
+		}
+		
+		.x-social-global {
+			display: flex;
+		}
+	}
+}

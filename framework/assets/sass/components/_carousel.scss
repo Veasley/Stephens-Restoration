@@ -1,0 +1,97 @@
+/* =============================
+	  CAROUSEL STYLES
+=============================== */
+
+.csl-carousel  {
+	
+	.owl-item {
+		border-radius: 5px;
+		text-align: center;
+		
+		.item {
+			background-color: white;
+			border-radius: 4px;
+			padding: 2em 6%;
+			margin: 15px;
+			-webkit-box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.15);
+			-moz-box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.15);
+			box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.15);
+			
+			p {
+				font-size: 0.8rem;
+				line-height: 1.3;
+			}
+			
+			img {
+				@include center;
+		 	}
+		 	
+		 	h6 {
+			 	margin-bottom: 0 !important;
+		 	}
+		 	
+		 	p > em {
+			 	font-family: $font-title;
+			 	text-transform: uppercase;
+			 	color: $l-grey;
+			 	font-weight: bold;
+			 	font-style: normal;
+		 	}
+		}
+	}
+}
+
+
+.owl-carousel .owl-nav.disabled {
+	display: block !important;
+}
+
+.owl-carousel .owl-nav {
+	position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: 0 !important;
+	
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+	    margin-top: -1em !important;
+	    color: transparent !important;
+	    background-color: transparent !important;
+	    
+	    &::after {
+		    content: '';
+		    font-family: 'Font Awesome 5 Free';
+		    font-weight: 900;
+		    position: absolute;
+		    width: 30px;
+		    height: 30px;
+		    top: 0;
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		    background-position: center center;
+	    }
+	}
+	
+	.owl-prev {
+		left: -3em;
+		
+		&::after {
+			left: 0;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABE0lEQVRIia3Wuw2DMBQF0JvPAmlTUFBAEVFEzJAVkGAAWIFVQuEBQpsuWQGlSBooUrAAK0RGGAEixjbvVmBZR/6g99jAILXr+ABuAGwAGYCUhVHDpb0u12EPAIduKO6eA/6yW4mJnM6f9/HleXflLUuwYVKlFSpiPM2WEOPJpaAmlrAwyv+eoQHGPx/MgqbYLLgG4xmdoS5mlVU2HexBCqwHqbAWrF3HpsLECmMqDNNLWYivMmnb1bNGYW5cu851EbTK6gvgQoW2W7bKqqBC+zOkQkeXQoFSFIeMhVEiBdeg0p5igi42KU00UOp6Gqi8p4ho3H6h9SuysFK1M1REnyyM+A60qk2bwfZ5DWhXJv5rAOAH6keB5Xf9pCgAAAAASUVORK5CYII=');
+		}
+	}
+	
+	.owl-next {
+		right: -3em;
+		
+		&::after {
+			right: 0;
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABEElEQVRIib3WwY3CMBBA0U86oIEc9mAXsFsClAASFAAl7DVHKAEOFAAlbA0UkBw4uIFtYTVREgUri+1kxJwiZfQ0kcczmdGEs2YOHIAd8ADWeVndCURRFE8JWe/52mASH8CPs+YzBPpRg86aE7Dw3s3HoJmz5rtXmR/JqFQYSk5CBbxF5EWjWV5WAu610PpQ8rI6a6Fd22ih/T5UQWdD2c4aaaNTBPwLLC+bbXejBsEp6L/gWPQlOAL9CoKJ6DGLSEoK9U9+WeGIQ3m8p21UG3sKhn+XU7GhJdaBGhi9JaWC0SyplRbWVrjSwlowlBSN1WBeVkdAJvVkrK1QRr+MfX+dJmMd2ISgbaXys5SMAfwBBAOPnaMcAgsAAAAASUVORK5CYII=');
+		}
+		
+		
+	}
+}
+

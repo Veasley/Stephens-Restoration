@@ -44,18 +44,18 @@
 	* Responsive Breakpoints | VARS
 	*------------------------------*/
 
-	$s-phone:	 	em( 320 );
-	$m-phone:	 	em( 480 );
-	$l-phone:		em( 600 );
-	$xl-phone: 	    em( 767 );
-	$ver-tablet: 	em( 768 );
-	$m-tablet: 	    em( 880 );
-	$l-tablet: 	    em( 980 );
-	$hor-tablet: 	em( 1024 );
-	$m-desktop:	  	em( 1200 );
-	$l-laptop:	    em( 1280 );
-	$m-desktop:  	em( 1400 );
-	$l-desktop: 	em( 1440 );
+	$s-phone:	 	320px;
+	$m-phone:	 	480px;
+	$l-phone:		600px;
+	$xl-phone: 	    767px;
+	$ver-tablet: 	768px;
+	$m-tablet: 	    880px;
+	$l-tablet: 	    980px;
+	$hor-tablet: 	1024px;
+	$m-desktop:	  	1200px;
+	$l-laptop:	    1280px;
+	$m-desktop:  	1366px;
+	$l-desktop: 	1440px;
 
 /*------------------------------
 * Responsive Max-Width | Mixin

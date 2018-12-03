@@ -5,6 +5,7 @@
 //LOGO
 //=======================
 .x-brand {
+/*
 	
 	//600px
 	@include respond-max( $l-phone ) {
@@ -21,6 +22,7 @@
 		   display: none;
 	    }
 	}
+*/
 
 }
 
@@ -28,10 +30,20 @@
 //NAVIGATION BAR
 //========================
 .x-navbar {
-	//background-color: $off-white !important;
-	box-shadow: none !important;
-	border-bottom: none !important;
+	border-top: 6px solid $red;
 	
+	.x-container {
+		
+		&.width {
+			width:  95%;
+		}
+		
+		&.max {
+			max-width: 1700px;
+		}
+	}
+	
+/*
 	.x-nav {
 		
 		> li {
@@ -70,6 +82,7 @@
 			transition: all 0.3s ease-in-out;
 		}
 	}
+*/
 }
 
 
@@ -94,29 +107,25 @@
 
 // LOGO
 .x-brand-scroll {
-	margin-top: 10px !important;
-	width: 200px;
-	height: 50px;
-	background-image: url(/wp-content/uploads/2017/09/logo-sm.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
     transition: all 0.5s ease-in-out;
     
+/*
     @include respond-custom(max-width, 979px) {
 	    margin-top: inherit !important;
 	    width: inherit;
 		height: inherit;
 	}
+*/
 	 
     img {
-	   display: none;
+	   width: 110px;
     }
 
 }
 
 
 // MENU / BAR
+/*
 .x-navbar-scroll {
 	//background-color: rgba($off-white, .95) !important;
 	
@@ -142,3 +151,4 @@
 	}
 	
 }
+*/

@@ -21,6 +21,17 @@
 }
 
 
+//Background Image Column
+//================
+._bg-col {
+	
+	//767px
+    @include respond-max($xl-phone) {
+        height: 320px;
+    }
+}
+
+
 
 //Stretch column height to match
 //====================
@@ -124,10 +135,12 @@
 	// right to left
 	._before._gradient-tb {
 	
+/*
 		&:before{
 			@include linear-gradient( to right, transparent 0%, rgba( $black, .8) );
 			z-index: 100;
 		}
+*/
 	}
 
 }
