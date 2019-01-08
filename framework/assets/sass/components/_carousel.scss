@@ -1,7 +1,6 @@
 /* =============================
 	  CAROUSEL STYLES
 =============================== */
-
 .csl-carousel  {
 	
 	.owl-item {
@@ -77,6 +76,16 @@
 	.owl-prev {
 		left: -3em;
 		
+		//600px
+		@include respond-max($l-phone) {
+			left: -2em;
+		}
+		
+		//480px
+		@include respond-max($m-phone) {
+			left: -1.5em;
+		}
+		
 		&::after {
 			left: 0;
 			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABE0lEQVRIia3Wuw2DMBQF0JvPAmlTUFBAEVFEzJAVkGAAWIFVQuEBQpsuWQGlSBooUrAAK0RGGAEixjbvVmBZR/6g99jAILXr+ABuAGwAGYCUhVHDpb0u12EPAIduKO6eA/6yW4mJnM6f9/HleXflLUuwYVKlFSpiPM2WEOPJpaAmlrAwyv+eoQHGPx/MgqbYLLgG4xmdoS5mlVU2HexBCqwHqbAWrF3HpsLECmMqDNNLWYivMmnb1bNGYW5cu851EbTK6gvgQoW2W7bKqqBC+zOkQkeXQoFSFIeMhVEiBdeg0p5igi42KU00UOp6Gqi8p4ho3H6h9SuysFK1M1REnyyM+A60qk2bwfZ5DWhXJv5rAOAH6keB5Xf9pCgAAAAASUVORK5CYII=');
@@ -85,6 +94,16 @@
 	
 	.owl-next {
 		right: -3em;
+		
+		//600px
+		@include respond-max($l-phone) {
+			right: -2em;
+		}
+		
+		//480px
+		@include respond-max($m-phone) {
+			right: -1.5em;
+		}
 		
 		&::after {
 			right: 0;

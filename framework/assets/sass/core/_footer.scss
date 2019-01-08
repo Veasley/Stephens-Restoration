@@ -4,13 +4,18 @@
 
 .x-colophon.top {
 	border: 0 !important;
-	background: url('/wp-content/uploads/2018/12/quote-bg.jpg');
+	background: url('/wp-content/uploads/2018/12/quote-bg2.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 	text-align: center;
 	padding: 5% 10px !important;
 	box-shadow: none !important;
+	
+	//1024px
+	@include respond-max( $hor-tablet ) {
+		padding: 3em 10px 2em !important;
+	}
 	
 	&::before {
 		content: '';
@@ -31,6 +36,48 @@
 			font-size: 2.2rem !important;
 			color: white;
 			margin-bottom: 1em;
+			
+			//1280px
+			@include respond-max( $l-laptop ) {
+				font-size: 2rem !important;
+			}
+			
+			//880px
+			@include respond-max( $m-tablet ) {
+				font-size: 1.6rem !important;
+			}
+			
+			//600px
+			@include respond-max($l-phone) {
+				font-size: 1.4rem !important;
+			}
+			
+			//480px
+			@include respond-max($m-phone) {
+				font-size: 1.2rem !important;
+			}
+		}
+		
+		ul {
+			box-shadow: none !important;
+			border: 0 !important;
+			text-shadow: none !important;
+			
+			> li {
+				border: 0;
+				box-shadow: none !important;
+				background-color:  transparent !important;
+				
+				@include respond-custom(max-width, 641px) {
+					padding-left: 0 !important;
+					padding-right: 0 !important;
+				}
+				
+				&:hover,
+				&:focus {
+					background-color: transparent !important;
+				}
+			}
 		}
 	}
 }
@@ -42,42 +89,74 @@
 	color: white;
 	font-size: 0.8rem;
 	box-shadow: none !important;
-	
+	padding: 20px 0;
 		
 	.copyrights {
 		text-align: left;
 		letter-spacing: 0;
 		
+		//767px
+	    @include respond-max($xl-phone) {
+	    	text-align: center;
+	    }
+		
 		.x-colophon-content {
 			text-align: left;
 			letter-spacing: 0;
-			margin: 0;
+			margin: 8px 0 0;
+			
+			//767px
+		    @include respond-max($xl-phone) {
+		    	text-align: center;
+		    	margin-bottom: 8px;
+		    }
 			
 		}
 
 	}
 	
 	.connect-social {
-		display: flex;
-		text-align: right;
+		
+		.x-social-global,
+		p,
+		span {
+			display: inline-block;
+			font-size: 1rem;
+			margin-bottom: 0;
+			
+			> a {
+				color: white;
+				
+				&:hover,
+				&:focus {
+					color: $red;
+				}
+			}
+		}
+		
+		span {
+			padding: 0 8px;
+		}
 		
 		.connect {
-			float: right;
-		}
-		
-		p,
-		.x-social-global,
-		span {
-			margin: 0;
-			display: inline;
-		}
-		
-		span {
-			padding: 0 3%;
-		}
-		
-		.x-social-global {
-			display: flex;
+			text-align: right;
+			
+			//767px
+		    @include respond-max($xl-phone) {
+		    	text-align: center;
+		    }
+			
+			.x-social-global {
+				margin: 0;
+				
+				> a {
+					margin: 0 5px;
+					
+					&:lasst-of-type {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 	}
 }

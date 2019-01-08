@@ -1,0 +1,107 @@
+/* =============================
+	  TAB STYLES
+=============================== */
+
+.tabs-bg-img {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.x-nav-tabs {
+	box-shadow: none !important;
+	
+	.x-nav-tabs-item {
+		font-family: $font-title;
+		font-weight: 900;
+		text-transform: uppercase;
+		border-bottom: 0;
+		
+		> a {
+			color: #818181;
+			padding: 1.1em 8px;
+			font-size: 0.85rem !important;
+			box-shadow: none;
+		}
+		
+		&.active {
+		
+			> a {
+				color: $red;
+ 				box-shadow: inset 0 -5px 0 $red;
+ 				
+ 				&:hover,
+				&:focus {
+					box-shadow: inset 0 -5px 0 $red;
+				}
+			}
+			
+		}
+	}
+	
+	
+}
+
+.x-tab-content {
+	box-shadow: none !important;
+	margin-bottom: 0;
+	border: 0;
+	
+	//600px
+	@include respond-max($l-phone) {
+		font-size: 0.85rem;
+	}
+	
+	.x-column.x-1-2  {
+		
+		&.last {
+			padding: 5% 3% 5% 0;
+			
+			//880px
+			@include respond-max( $m-tablet ) {
+				padding: 5% 3% 5% 3%;
+			}
+
+		}
+		
+		._red-border-left {
+			margin-bottom: 2em;
+		}
+		
+	}
+}
+
+
+
+// SERVICE PAGE TABS
+#services-tabs {
+	
+	.x-tab-content {
+				
+		.x-tab-pane {
+			background-color: $blue;
+			color: white;
+			padding: 0;
+			
+			h3 {
+				color: white;
+			}
+			
+			&.extra-tb-padding {
+				
+				.x-column.x-1-2  {
+					
+					&.last {
+						padding: 10% 3% 10% 0;
+						
+						//880px
+						@include respond-max( $m-tablet ) {
+							padding: 5% 3% 5% 3%;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

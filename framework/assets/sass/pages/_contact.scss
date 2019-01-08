@@ -1,3 +1,35 @@
 /* =============================
 		CONTACT PAGE
 =============================== */
+
+.contact-details {
+	
+	//767px
+	@include respond-max($xl-phone) {
+		clear: both;
+		margin-top: 20% !important;
+	}
+	
+	strong {
+		color: $red;
+		text-transform: uppercase;
+	}
+	
+	p:first-of-type {
+		margin-bottom: 0;
+	}
+	
+	i {
+		font-size: 2rem;
+		padding: 0 8px;
+	}
+	
+	a {
+		color: $blue;
+		
+		&:hover,
+		&:focus {
+			color: $red;
+		}
+	}
+}

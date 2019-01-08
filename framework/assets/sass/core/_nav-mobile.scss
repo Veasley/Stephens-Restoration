@@ -1,3 +1,54 @@
 /* =============================
 	MOBILE NAVIGATION STYLES
 =============================== */
+.x-btn-navbar {
+	padding: 0;
+	box-shadow: none !important;
+	border-width: 0;
+	margin-top: 28px !important;
+	font-size: 22px !important;
+}
+
+.x-nav-wrap.mobile {
+	
+	.x-nav {
+		
+		> li {
+			width: 50%;
+			float: left;
+			
+			//400px
+		    @include respond-max(400px) {
+				width: 100%;
+				float: none;
+			}
+			
+			&:nth-child(2n) {
+				border-left: 1px solid $off-white;
+				
+				//400px
+			    @include respond-max(400px) {
+					border-left: 0;
+				}
+			}
+			
+			&.request-quote-link {
+				padding-left: 0;
+				background-color: $red;
+				
+				> a {
+					padding: 1em 0 !important;
+					margin: 0 !important;
+					background-color: $red;
+					width: 100%;
+					border-radius: 0;
+				}
+			}
+		}
+	}
+	
+	
+	#x-nav-wrap-mobile-sm-0 {
+		margin-left: 0;
+	}
+}

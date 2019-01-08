@@ -23,9 +23,22 @@ input[type="color"],
 	border: 1px solid #b9b9b9 !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
-	color: $grey !important;
+	color: $d-grey !important;
 	height: 45px !important;
 }
+
+.gform_wrapper ul.gfield_checkbox li {
+	
+	input {
+		height: auto !important;
+	}
+	
+	label {
+		font-size: 1rem;
+	}
+}
+
+
 
 
 // Input fields
@@ -33,15 +46,17 @@ input[type="text"] {
 	height: 40px;
 	margin-bottom: 0 !important;
 	
-	@include respond-custom(max-width, 640px) {
+	@include respond-custom(max-width, 641px) {
 		margin-top: 0 !important;
 	}
 }
 
 ::placeholder,
 :-ms-input-placeholder,
-::-ms-input-placeholder {
-	color: $d-grey;
+::-ms-input-placeholder,
+::-webkit-input-placeholder {
+	color: $d-grey !important;
+	font-size: 14px !important;
 }
 
 
@@ -54,13 +69,33 @@ textarea {
 }
 
 
+.wpforms-form .wpforms-one-half {
+	
+	//480px
+	@include respond-max( $m-phone ){
+		width: 100% !important;
+		float: none !important;
+		margin: 0 !important;
+		display: block !important;
+		padding: 0 0 10px 0 !important;
+	}
+}
+
+.wpforms-form .wpforms-field {
+	
+	//480px
+	@include respond-max( $m-phone ){
+		margin: 0 !important;
+	}
+}
 
 
 
 //Gravity submit Button
 //========================
 .wpforms-submit,
-input[type="submit"] {
+input[type="submit"],
+.button {
 	@extend .x-btn;
 	padding: 15px 8% 13px !important;
 	background-color: $red !important;
@@ -71,24 +106,40 @@ input[type="submit"] {
 	&:focus {
 		background-color: $blue !important;
 		border-color: $blue !important;
+		border-radius: 4px !important;
 	}
 
 }
 
-.wpforms-recaptcha-container {
+
+
+
+.wpforms-recaptcha-container,
+.captcha {
 	display: inline-block;
 	float: left !important;
-}
-
-.wpforms-submit-container {
-	text-align: right;
-	clear: right !important;
-}
-
-.wpforms-submit  {
 	
+	@include respond-custom(max-width, 641px) {
+		display: block;
+		float: none !important;
+		padding-bottom: 0 !important;
+	}
 }
 
+.wpforms-submit-container,
+.gform_wrapper .gform_footer {
+	text-align: right;
+	float: right !important;
+	clear: right !important;
+	margin-top: -4em !important;
+	
+	@include respond-custom(max-width, 641px) {
+		text-align: left;
+		float: none !important;
+		clear: both !important;
+		margin-top:  1em  !important;
+	}
+}
 
 .wpforms-error {
 	color: white !important;
@@ -99,13 +150,33 @@ input[type="submit"] {
 
 //BREAKING INPUT FIELDS TO COLUMNS
 //========================================
+
+.gf_left_half {
+	padding-right: 11px !important;
+}
+
+.gf_right_half {
+	padding-left: 7px !important;
+}
+
+
+.gf_right_half,
+.gf_left_half {
+	
+	@include respond-custom(max-width, 641px) {
+		padding-left: inherit !important;
+		padding-right: inherit !important;
+	}
+}
+
+
 .adjust-left,
 .adjust-right {
 	width: 48%;
 	display: inline-block;
 	margin-top: 0 !important;
 	
-	@include respond-custom(max-width, 640px) {
+	@include respond-custom(max-width, 641px) {
 		width: 100%;
 		display: block;
 	}

@@ -11,5 +11,10 @@
 	.x-feature-box-text {
 		font-size: 0.95rem;
 		line-height: 1.4;
+		
+		//600px
+		@include respond-max($l-phone) {
+			font-size: 0.85rem;
+		}
 	}
 }

@@ -18,7 +18,14 @@
 	.x-text {
 		background-color: rgba(0,0,0, .48);
 		border: 6px solid white;
-		padding: 5% 4% 3%;
+		padding: 2em 4% 1.8em;
+		
+		//600px
+		@include respond-max($l-phone) {
+			border-width: 0;
+			background-color: transparent;
+			padding: 3em 0 0 0;
+		}
 		
 		h1 {
 			margin-bottom: 20px;
@@ -27,6 +34,17 @@
 		> p {
 			font-size: 1.1rem;
 			line-height: 1.5;
+			
+			//1280px
+			@include respond-max( $l-laptop ) {
+				font-size: 1rem;
+			}
+			
+			//600px
+			@include respond-max($l-phone) {
+				font-size: 0.85rem;
+			}
+
 		}
 		
 	}
